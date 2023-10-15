@@ -1,0 +1,24 @@
+/* Importing Font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* General Styles */
+html {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}

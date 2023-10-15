@@ -1,6 +1,6 @@
 // Painting Paper
 const paintingPaper = document.getElementById('painting-paper');
-let pixels = 64;
+let pixels = 16;
 
 const pixelWidth = paintingPaper.offsetWidth / pixels;
 const pixelHeight = paintingPaper.offsetHeight / pixels;
@@ -26,6 +26,15 @@ for(let i = 1; i <= pixels * pixels; ++i) {
             pixel.style.backgroundColor = 'black';
         }
     })
+
+
+    pixel.addEventListener('dragstart', event => {
+        event.preventDefault();
+      });
+      
+    pixel.addEventListener('drop', event => {
+        event.preventDefault();
+    });
 
     paintingPaper.append(pixel);
 }

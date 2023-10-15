@@ -27,6 +27,10 @@ for(let i = 1; i <= pixels * pixels; ++i) {
         }
     })
 
+    pixel.addEventListener('click', () => {
+        pixel.style.backgroundColor = 'black';
+    })
+
 
     pixel.addEventListener('dragstart', event => {
         event.preventDefault();

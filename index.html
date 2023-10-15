@@ -13,5 +13,17 @@
         <div id="painting-paper">
             
         </div>
+
+        <div id="footer"></div>
+
+        <script src="./script.js"></script>
+        <script>
+            const footerText = document.querySelector('#footer');
+            let currentDate = new Date;
+            let currentYear = currentDate.getFullYear();
+
+            footerText.textContent = `Copyright © ${currentYear} Sopu Matei`;
+
+        </script>
     </body>
 </html>

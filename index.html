@@ -11,15 +11,25 @@
             <h1>Classic Painting</h1>
         </div>
 
-        <div id="painting-paper">
-            
+        <div id="main">
+            <div id="paint-buttons">
+                <input id="color-picker" type="color">
+                <button id="color-mode-button" class="active">Color Mode</button>
+                <button id="rainbow-mode-button">Rainbow Mode</button>
+                <button id="erase-button">Eraser</button>
+                <button id="delete-button">Delete</button>
+            </div>
+
+            <div id="painting-paper"></div>
         </div>
 
-        <div id="footer"></div>
+        <div id="footer">
+            <h6></h6>
+        </div>
 
         <script src="./script.js"></script>
         <script>
-            const footerText = document.querySelector('#footer');
+            const footerText = document.querySelector('#footer h6');
             let currentDate = new Date;
             let currentYear = currentDate.getFullYear();
 

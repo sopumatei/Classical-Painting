@@ -14,22 +14,24 @@
         <div id="main">
             <div id="paint-buttons">
                 <input id="color-picker" type="color">
-                <button id="color-mode-button" class="active">Color Mode</button>
-                <button id="rainbow-mode-button">Rainbow Mode</button>
-                <button id="erase-button">Eraser</button>
-                <button id="delete-button">Delete</button>
+                <button id="color-mode-button" class="toolButton active">Color Mode</button>
+                <button id="rainbow-mode-button" class="toolButton">Rainbow Mode</button>
+                <button id="erase-button" class="toolButton">Eraser</button>
+                <button id="delete-button" class="toolButton">Delete</button>
+                <h3 id="size-show">16 x 16</h3>
+                <input id="size-slider" type="range" min="1" max="64" value="16">
             </div>
 
             <div id="painting-paper"></div>
         </div>
 
         <div id="footer">
-            <h6></h6>
+            <h4></h4>
         </div>
 
         <script src="./script.js"></script>
         <script>
-            const footerText = document.querySelector('#footer h6');
+            const footerText = document.querySelector('#footer h4');
             let currentDate = new Date;
             let currentYear = currentDate.getFullYear();
 

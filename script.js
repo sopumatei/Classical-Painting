@@ -2,8 +2,13 @@
 const paintingPaper = document.getElementById('painting-paper');
 let pixels = 16;
 
+paintingPaper.setAttribute('style', `grid-template-columns: repeat(${pixels}, 1fr); grid-template-rows: repeat(${pixels}, 1fr);`)
+
 const pixelWidth = paintingPaper.offsetWidth / pixels;
 const pixelHeight = paintingPaper.offsetHeight / pixels;
+
+console.log("Height: " + pixelHeight);
+console.log("Width: " + pixelWidth);
 
 // This part checks if one of the two mouse buttons is held down 
 let mouseDown = 0;
@@ -18,8 +23,6 @@ window.onmouseup = () => {
 for(let i = 1; i <= pixels * pixels; ++i) {
     const pixel = document.createElement('div');
     pixel.style.backgroundColor = "white";
-    pixel.style.width = `${pixelWidth}px`;
-    pixel.style.height = `${pixelHeight}px`;
 
     pixel.addEventListener('mouseenter', () => {
         if (mouseDown) {

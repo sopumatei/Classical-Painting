@@ -12,7 +12,7 @@
 /* General Styles */
 html {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     background-color: rgb(242, 242, 242);
 }
 
@@ -22,13 +22,102 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
+    gap: 1rem;
+
+    text-align: center;
+}
+
+/* MAIN */
+
+#main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 0 0.25em;
+}
+
+/* Paint Buttons */
+#paint-buttons {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75em;
+
+    width: min(40vw, 200px);
+}
+
+#paint-buttons button {
+    position: relative;
+    width: 100%;
+    padding: 0.15em;
+    font-size: inherit;
+    font-family: inherit;
+    border-radius: 5px;
+    border: 1.5px solid black;
+    background-color: rgb(242, 242, 242);
+
+    transition: all 0.1s linear;
+}
+
+#color-picker {
+    /* -webkit-appearance: none; */
+    border: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+
+    transition: all 0.1s linear;
+}
+
+#color-picker::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+  
+#color-picker::-webkit-color-swatch {
+    border: none;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    background-color: black;
+    left: 0;
+    right: 0;
+    top: 100%;
+    bottom: 0;
+    transition: top 0.1s linear;
+}
+
+button:hover::before {
+    top: 90%;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#color-picker:hover {
+    transform: scale(1.05);
+}
+
+#color-picker:active {
+    transform: scale(0.95);
+}
+
+.active::before {
+    top: 90%;
 }
 
 /* Painting Paper Section */
 #painting-paper {
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    width: min(80vw, 650px);
-    height: min(80vw, 650px);
+    width: min(80vw, 350px);
+    height: min(80vw, 350px);
     display: grid;
 }

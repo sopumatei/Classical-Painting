@@ -36,14 +36,14 @@ window.onmouseup = () => {
 }
 
 // For mobile
-window.ontouchstart = () => {
+/* window.ontouchstart = () => {
     //console.log('TOUCHED');
     ++mouseDown; 
 }
 window.ontouchend = () => {
     //console.log('UNTOUCHED');
     --mouseDown;
-}
+} */
 
 // Render pixels
 function renderPixels() {
@@ -58,7 +58,7 @@ function renderPixels() {
 
         pixel.addEventListener('mouseover', changeColor)
 
-        pixel.addEventListener('touchmove', changeColor)
+        //pixel.addEventListener('touchmove', changeColor)
 
         pixel.addEventListener('mousedown', changeColor)
 

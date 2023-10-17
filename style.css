@@ -12,7 +12,6 @@
 /* General Styles */
 html {
     font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
     background-color: rgb(242, 242, 242);
 }
 
@@ -22,7 +21,7 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
-    gap: 1rem;
+    gap: 20px;
 
     text-align: center;
 }
@@ -39,8 +38,8 @@ button:hover {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    gap: 1em;
-    padding: 0 0.25em;
+    gap: 25px;
+    padding: 0 15px;
 }
 
 /* Paint Buttons */
@@ -49,7 +48,7 @@ button:hover {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    gap: 0.75em;
+    gap: 15px;
 
     width: min(40vw, 200px);
 }
@@ -57,7 +56,7 @@ button:hover {
 #paint-buttons button {
     position: relative;
     width: 100%;
-    padding: 0.15em;
+    padding: 4px;
     font-size: inherit;
     font-family: inherit;
     border-radius: 5px;
@@ -147,7 +146,21 @@ input[type='range']::-webkit-slider-thumb {
 #painting-paper {
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    width: min(80vw, 350px);
-    height: min(80vw, 350px);
+    width: min(80vw, 650px);
+    height: min(80vw, 650px);
     display: grid;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 25px;
+    }
+}
+  
+@media (max-width: 650px) {
+    html {
+        font-size: 16px;
+    }
 }
